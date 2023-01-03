@@ -664,4 +664,6 @@ const convertInstruction2 = instructionStr => {
 const instructions2 = inputInstructions2.split('\n').map(convertInstruction2);
 
 const finalStacks2 = instructions2.reduce((stacks, [amount, from, to]) => moveCrates2(stacks, amount, from, to), initalStacks2);
-console.log(finalStacks2);
+
+const stackTops = finalStacks.map(stack => stack[0]).join('')
+console.log(stackTops);
